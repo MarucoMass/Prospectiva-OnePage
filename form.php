@@ -20,7 +20,7 @@ $errors = array();
 
 $ip = $_SERVER['REMOTE-ADDR'];
 $captcha = $_POST['g-recaptcha-response'];
-$secretkey = "6LdMdmAlAAAAAAaKKUD-zxYIPN27qnlsYVVnWOLa";
+$secretkey = "";
 
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretkey}&response={$captcha}&remoteip={$ip}");
 $atribute = json_decode($response, TRUE);
@@ -30,12 +30,12 @@ if(isset($_POST['submit'])){
     if($atribute['success']) {
 
         // Datos de la cuenta de correo utilizada para enviar vía SMTP
-        $smtpHost = "c1701964.ferozo.com";  // Dominio alternativo brindado en el email de alta 
-        $smtpUsuario = "mail@prospectiva.digital";  // Mi cuenta de correo
-        $smtpClave = "@gaNU71bilo";  // Mi contraseña
+        $smtpHost = "";  // Dominio alternativo brindado en el email de alta 
+        $smtpUsuario = "";  // Mi cuenta de correo
+        $smtpClave = "";  // Mi contraseña
         
         // Email donde se enviaran los datos cargados en el formulario de contacto
-        $emailDestino = "prospectiva.mkt.inmo@gmail.com";
+        $emailDestino = "";
         
         $mail = new PHPMailer();
         $mail->IsSMTP();
