@@ -26,6 +26,24 @@ body, input, textarea{
     font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: 1.15;
 }
+body{
+    position: relative;
+    -webkit-transition: all .6s ease-out;
+	-moz-transition: all .6s ease-out;
+	-ms-transition: all .6s ease-out;
+	-o-transition: all .6s ease-out;
+    transition: all .6s ease-out;
+}
+body.active::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: 90;
+}
 h1{
     font-size: var(--fs-title);
     font-weight: var(--fw-800);
@@ -67,7 +85,6 @@ html { scroll-behavior: smooth; }
 	-ms-transition: all .5s ease-out;
 	-o-transition: all .5s ease-out;
     transition: all .5s ease-out;
-    padding-top: calc(10vh + 50px); 
     padding-top: calc(1vh + 50px); 
 }
 .header.active {
@@ -180,24 +197,6 @@ html { scroll-behavior: smooth; }
   }
 .nav-burguer.active{
     transform: rotate(45deg);
-}
-body{
-    position: relative;
-    -webkit-transition: all .6s ease-out;
-	-moz-transition: all .6s ease-out;
-	-ms-transition: all .6s ease-out;
-	-o-transition: all .6s ease-out;
-    transition: all .6s ease-out;
-}
-body.active::after{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .75);
-    z-index: 90;
 }
 #inicio{
     position: relative;
@@ -323,21 +322,6 @@ body.active::after{
     margin-bottom: 14rem;
     gap: 8px;
 }
-/* @media (min-width:340px) {
-    #servicios__box--desc { margin-bottom: 14rem; }
-}
-@media (min-width:380px) {
-    #servicios__box--desc { margin-bottom: 14rem; }
-}
-@media (min-width:416px) {
-    #servicios__box--desc { margin-bottom: 14rem; }
-}
-@media (min-width:450px) {
-    #servicios__box--desc { margin-bottom: 14rem; }
-}
-@media (min-width:820px) {
-    #servicios__box--desc { margin-bottom: 14rem; }
-} */
 .name{
     background-color: rgb(47, 10, 82);
     width: fit-content;
@@ -386,7 +370,6 @@ input[type="submit"]{cursor: pointer;}
 }
 #formulario{
     grid-template-columns: 1fr;
-    /* overflow-x: hidden; */
 }
 #contacto__title{
     text-align: left;
@@ -528,12 +511,10 @@ input[type="submit"]{cursor: pointer;}
     font-size: var(--fs-bigger);
     font-weight: var(--fw-600);
     max-width: 650px;
-    /* margin-top: 30px; */
 }
 .p2{
     font-size: var(--fs-small);
     font-weight: var(--fw-500);
-    /* margin-top: 20px; */
     max-width: 780px;
     max-width: 900px;
 }
@@ -597,7 +578,7 @@ input[type="submit"]{cursor: pointer;}
     #inicio::before{
         top: 0%;
     }
-        #quienes-somos::before{
+    #quienes-somos::before{
         height: 250px;
         top: -250px;
     }

@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
         $mail->FromName = $nombre;
         $mail->AddAddress($emailDestino); // Esta es la dirección a donde enviamos los datos del formulario
         
-        $mail->Subject = "Formulario de contacto del sitio web RPA-Works"; // Este es el titulo del email.
+        $mail->Subject = "Formulario de contacto del sitio web Prospectiva"; // Este es el titulo del email.
         $mail->Body = "De: $nombre <a href='mailto:$email'>$email</a><br />Nombre: $nombre <br /> Teléfono: $telefono<br />Compañía: $empresa<br /> $texto"; // Texto del email en formato HTML
         $mail->AltBody = "De: $nombre <a href='mailto:$email'>$email</a><br />Nombre: $nombre <br /> Teléfono: $telefono<br />Compañía: $empresa<br /> $texto"; // Texto sin formato HTML
         // FIN - VALORES A MODIFICAR //

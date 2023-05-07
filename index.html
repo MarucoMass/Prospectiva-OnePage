@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="assets/Isologo Prospectiva.png" type="image/png">
     <title>Prospectiva</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://kit.fontawesome.com/df53a93159.js" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -19,7 +20,6 @@
 
             <div class="header__logo">
                 <a href="index.html"><img class="header__logo--img one" src="assets/Isologo Prospectiva Final-06.png" alt="logo Prospectiva"></a>
-                <a href="index.html"><img class="header__logo--img two hidden" src="assets/Isologo Prospectiva Final-02.png" alt="logo Prospectiva"></a>
             </div>
             
             <div class="nav-burguer flex"><div class="bar"></div></div>
@@ -56,7 +56,7 @@
                 <div class="contacto">
                     <form action="form.php" method="post" class="grid col" id="formulario">
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-                        <input type="text" name="mail" id="mail" placeholder="Mail">
+                        <input type="text" name="email" id="mail" placeholder="Mail">
                         <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
                         <input type="text" name="empresa" id="empresa" placeholder="Empresa">
                         <textarea name="texto" id="texto__uno" cols="0" rows="5" placeholder="Escribe tu consulta"></textarea>
@@ -81,13 +81,13 @@
                             <h2>Plan Silver</h2>
                             <h3 class="p1 text-violet m-0">Publicidad en Facebook<br> e Instagram</h3>
                             <p class="p2 m-0">Creamos y optimizamos anuncios para generar las consultas de tus clientes potenciales y ayudarte a aumentar las ventas a corto plazo.</p>
-                            <a href="#contacto" class="btn btn--hire bg-violet silver">Contratar</a>
+                            <a href="#contacto" id="btn-silver" class="btn btn--hire bg-violet silver">Contratar</a>
                         </div>
                         <div class="flex flex__boxes--servicios">
                             <h2>Plan Gold</h2>
                             <h3 class="p1 text-violet m-0">Publicidad en Facebook,<br> Instagram y Google</h3>
                             <p class="p2 m-0">Gestionamos los anuncios en Facebook Ads para atraer clientes potenciales, y nos aseguramos de tu posicionamiento en Google para que las personas interesadas en vender o comprar propiedades te encuentren.</p>
-                            <a href="#contacto" class="btn btn--hire bg-violet gold">Contratar</a>
+                            <a href="#contacto" id="btn-gold" class="btn btn--hire bg-violet gold">Contratar</a>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,8 @@
         <a href="https://efectodigital.com.ar/" class="efdig-link text-white center" target="_blank">© 2023 Desarrollado por Efecto Digital</a>
     </footer>
 
-    <script src="js/header.js"></script>
-    <script src="js/form.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery__header.js"></script>
+    <!-- <script src="js/form.js"></script> -->
 </body>
 </html>

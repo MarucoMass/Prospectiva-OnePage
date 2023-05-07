@@ -7,7 +7,7 @@ The order was made by [Efecto Digital](https://efectodigital.com.ar/).
 - Vanilla CSS.
 - PHP.
 - PHPMailer.
-- Javascript.
+- jQuery.
 - Google recaptcha
 
 ### Deploy
